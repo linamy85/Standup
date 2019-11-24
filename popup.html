@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+
+<body style="margin:10px">
+    <form class="pure-form pure-form-aligned">
+        <fieldset>
+            <button id="stop" class="pure-button button-error" style="margin-bottom: 5px">Stop!</button>
+            <div class="pure-control-group">
+                <label for="work_interval">Work interval (Minutes)</label>
+                <input type="number" name="work_interval" id="work_interval" placeholder="Work interval in minutes">
+            </div>
+            <div class="pure-control-group">
+                <label for="rest_period">Rest period (Minutes)</label>
+                <input type="number" name="rest_period" id="rest_period" placeholder="Rest period in minutes">
+            </div>
+            <div class="pure-control-group">
+                <label for="start_on_the_hour" class="pure-checkbox">
+                    <input type="checkbox" id="start_on_the_hour" style="margin-right:5px">Start on the next hour
+                </label>
+            </div>
+            <button id="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+    </form>
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+<style>
+.pure-button {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
+}
+</style>
+
+</html>
