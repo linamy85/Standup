@@ -1,7 +1,7 @@
 {
   "name": "Standup!",
   "version": "0.1",
-  "description": "WRest like a cat :D",
+  "description": "Rest like a cat :D",
   "permissions": ["storage"],
   "background": {
       "scripts": ["background.js"],

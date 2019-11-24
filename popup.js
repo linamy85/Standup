@@ -4,6 +4,12 @@ const Submit = function() {
     const start_on_the_hour = document.getElementById('start_on_the_hour').checked;
     console.log(work_interval, rest_period, start_on_the_hour);
 
+    if (rest_period > work_interval / 2) {
+        console.log('Rest over 50% of work interval...');
+        alert('I am not sure resting more than working is a good idea...');
+        return;
+    }
+
     chrome.storage.sync.set({
     	work_interval: work_interval,
     	rest_period: rest_period,
@@ -47,8 +53,9 @@ window.onload = function() {
 	console.log('Window onload');
 	const items = ['work_interval', 'rest_period', 'start_on_the_hour'];
 	chrome.storage.sync.get(items, function(result) {
-		for (var item of items) {
+		for (var item of ['work_interval', 'rest_period']) {
 			document.getElementById(item).value = result[item];
 		}
+        document.getElementById('start_on_the_hour').checked = result['start_on_the_hour'];
 	});
 };
